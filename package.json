@@ -1,0 +1,18 @@
+{
+  "name": "cmd-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "cmd-plugin": "cf.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^8.0.0"
+  }
+}
