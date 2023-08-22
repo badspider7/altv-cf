@@ -1,18 +1,17 @@
 {
-  "name": "cmd-plugin",
-  "version": "1.0.0",
+  "name": "cpd-cli",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
-    "cmd-plugin": "cf.js"
+    "cpd": "bin/cf"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Badspider",
   "license": "ISC",
   "dependencies": {
-    "commander": "^11.0.0",
-    "inquirer": "^8.0.0"
+    "commander": "^11.0.0"
   }
 }
