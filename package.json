@@ -1,8 +1,9 @@
 {
-  "name": "cpd",
+  "name": "alt-v-cpd",
   "version": "0.0.1",
   "description": "Create the plug-in dir/folder in Athena from the command line",
   "main": "index.js",
+  "keywords": ["GTAV","Athena","alt-v","cli"],
   "bin": {
     "cpd": "bin/cf"
   },
