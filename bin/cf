@@ -117,14 +117,13 @@ const superMkdir = (filePath, dirname, filename) => {
 
 
 commander
-  .version('0.0.1')
-  .description('通过命令行在Athena创建你需要的插件文件夹')
+  .version('0.0.1','-v','得到插件的当前版本')
+  .description('通过命令行在Athena创建插件文件夹')
   .arguments('<pluginName>')
   .option('-c, --create-components', '创建webview下面的component文件夹,后面不需要文件名')
   .action((pluginName, options) => {
     const { createComponents } = options;
-    console.log(__dirname);
-    // test(pluginName,plugin_dir,createComponents);
+    test(pluginName,plugin_dir,createComponents);
    })
 
    commander.parse(process.argv);
