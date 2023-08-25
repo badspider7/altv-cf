@@ -3,7 +3,7 @@
 ### install
 
 ```javascript
-npm i -g cpd
+npm i cpd
 ```
 
 or

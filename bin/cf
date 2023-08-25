@@ -11,7 +11,7 @@ const commander = require("commander");
 const project_basic_file = __dirname.split('node_modules')[0];
 
 //得到Athena插件文件夹的具体路径
-const plugin_dir = project_basic_file.concat("src\\core\\plugin");
+const plugin_dir = project_basic_file.concat("src\\core\\plugins");
 // const plugin_dir = "D:\\profileProject\\cmd-plugin\\bin\\test"
 
 
@@ -123,6 +123,7 @@ commander
   .option('-c, --create-components', '创建webview下面的component文件夹,后面不需要文件名')
   .action((pluginName, options) => {
     const { createComponents } = options;
+    console.log(pluginName);
     test(pluginName,plugin_dir,createComponents);
    })
 
