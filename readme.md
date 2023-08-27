@@ -1,20 +1,48 @@
-> 利用命令行快速创建插件文件夹
+> 利用命令行快速创建 Athena 插件文件夹,你可以在 example 文件夹里面修改生成的模板
 
-### install
+> use command line to create Athena plugis folder,you can change example code in example folder.
+
+## install
+
+Using npm:
 
 ```javascript
 npm i cpd
 ```
 
-or
+Using yarn:
 
 ```javascript
-npm i  cpd --save
-npm link
+yarn add cpd
 ```
 
-### useage
+## Useage
 
-cpd <plugin_name> 创建 Athena 插件文件夹
+> 最重要的是要在 package.json 里面配置一下
 
-cpd -c <plugin_name> 创建 Athena 插件文件夹和 webview 下面的 component 文件夹
+> The most important thing is to configuration in package.json,such as this.
+
+```json
+"script":{
+    "...":"other Configuration",
+    // 最重要的是要加上这个
+    "cf":"cpd"
+}
+```
+
+Using npm:
+
+```javascript
+npm run cf <plugin_name>
+```
+
+Using yarn:
+
+```javascript
+yarn cf <plugin_name>
+```
+
+## Example
+
+![演示](http://s01el4yfr.bkt.clouddn.com/npm_readme/cf.png)
+![demo](http://s01el4yfr.bkt.clouddn.com/npm_readme/demo.png)

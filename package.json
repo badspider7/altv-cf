@@ -1,6 +1,6 @@
 {
   "name": "alt-v-cpd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create the plug-in dir/folder in Athena from the command line",
   "main": "index.js",
   "keywords": [
@@ -12,6 +12,11 @@
   "bin": {
     "cpd": "bin/cf"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badspider7/alt-v-cpd.git"
+  },
+  "homepage": "https://www.badspider.top",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
