@@ -1,6 +1,6 @@
 > 利用命令行快速创建 Athena 插件文件夹,你可以在 example 文件夹里面修改生成的模板
 
-> use command line to create Athena plugis folder,you can change example code in example folder.
+> use command line to create Athena plugins folder,you can change example code in example folder.
 
 ## install
 
