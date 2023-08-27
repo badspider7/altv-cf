@@ -1,24 +1,25 @@
 {
   "name": "altv-cf",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Create the plugin folder in Athena from the command line",
   "main": "index.js",
   "keywords": [
     "GTAV",
     "Athena",
-    "alt-v",
-    "cli"
+    "altv",
+    "cli",
+    "tool"
   ],
   "bin": {
-    "cpd": "bin/cf"
+    "cpd": "./bin/cf.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/badspider7/alt-v-cpd.git"
+    "url": "https://github.com/badspider7/altv-cf.git"
   },
   "homepage": "https://www.badspider.top",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cf": "cpd"
   },
   "author": "Badspider",
   "license": "ISC",

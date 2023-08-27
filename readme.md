@@ -7,13 +7,13 @@
 Using npm:
 
 ```javascript
-npm i cpd
+npm i altv-cf
 ```
 
 Using yarn:
 
 ```javascript
-yarn add cpd
+yarn add altv-cf
 ```
 
 ## Useage
