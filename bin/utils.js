@@ -17,7 +17,7 @@ function createDir(dirname, plugin_dir, isCreateComponents) {
       }
 
       const newDirPath = path.join(plugin_dir, dirname);
-      superMkdir(newDirPath, ['client', 'server', 'share', 'webview']);
+      superMkdir(newDirPath, ['client', 'server', 'share', 'webview'],dirname);
 
       // 创建 webview 下面的 components
       if (isCreateComponents) {
@@ -42,14 +42,14 @@ function isFilenameExist(dirPath) {
  * @param {Array} filename 不输入默认为index.ts
  * @return {string} DirPath
  */
-function superMkdir(filePath, dirname) {
+function superMkdir(filePath, dirnameC,filename) {
   return new Promise((resolve, reject) => {
-    if (!filePath || dirname.length === 0) {
+    if (!filePath || dirnameC.length === 0) {
       reject(new Error('路径和文件夹名称不能为空'));
       return;
     }
 
-    dirname.forEach((item) => {
+    dirnameC.forEach((item) => {
       fs.mkdir(path.join(filePath, item), (err) => {
         if (err) {
           reject(err);
@@ -65,7 +65,7 @@ function superMkdir(filePath, dirname) {
              exampleCode = fs.readFileSync(examplePath, 'utf-8');
         }
 
-        const indexFileName = item === 'webview' || item === 'components' ? 'index.vue' : 'index.ts';
+        const indexFileName = item === 'webview' || item === 'components' ? filename+'.vue' : 'index.ts';
         fs.writeFileSync(path.join(filePath, item, indexFileName), exampleCode, 'utf-8');
       });
     });
