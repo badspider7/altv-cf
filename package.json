@@ -1,6 +1,6 @@
 {
   "name": "altv-cf",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Create the plugin folder in Athena from the command line",
   "main": "index.js",
   "keywords": [
