@@ -44,5 +44,5 @@ yarn cf <plugin_name>
 
 ## Example
 
-![演示](http://s01el4yfr.bkt.clouddn.com/npm_readme/cf.png)
-![demo](http://s01el4yfr.bkt.clouddn.com/npm_readme/demo.png)
+![演示]('./bin/example/step1.png')
+![demo]('./bin/example/step1.png')

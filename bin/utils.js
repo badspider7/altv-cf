@@ -22,7 +22,11 @@ function createDir(dirname, plugin_dir, isCreateComponents) {
       }
 
       const newDirPath = path.join(plugin_dir, dirname);
-      superMkdir(newDirPath, ["client", "server", "share", "webview"], dirname);
+      superMkdir(
+        newDirPath,
+        ["client", "server", "shared", "webview"],
+        dirname
+      );
 
       // 创建 webview 下面的 components
       if (isCreateComponents) {
@@ -42,7 +46,7 @@ function isFilenameExist(dirPath) {
 /**
  *  cf filename
  * @param {string} path
- * @param {Array} dirname [client, server, share ,webview ]
+ * @param {Array} dirname [client, server, shared ,webview ]
  * @param {Array} filename 不输入默认为index.ts
  * @return {string} DirPath
  */
