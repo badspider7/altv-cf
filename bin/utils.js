@@ -1,13 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 
+//将文件名转换为大驼峰
+function convertToCamelCase(filename) {
+  let fileArr = filename.split("-");
+  let tempArr = [];
+  fileArr.forEach((item) => {
+    let tempStr = "";
+    tempStr = item.slice(0, 1).toUpperCase() + item.slice(1).toLowerCase();
+    tempArr.push(tempStr);
+  });
+  return tempArr.join("");
+}
+
 function createDir(dirname, plugin_dir, isCreateComponents) {
   return new Promise((resolve, reject) => {
-    //判断文件名是否有-，如果有转换为_
-    if (dirname.includes("-")) {
-      dirname = dirname.replace(/-/g, "_");
-    }
-
     // 判断文件夹的名字是否已经存在
     if (isFilenameExist(path.join(plugin_dir, dirname))) {
       reject(new Error("文件夹已存在，请换个名字"));
@@ -22,10 +29,16 @@ function createDir(dirname, plugin_dir, isCreateComponents) {
       }
 
       const newDirPath = path.join(plugin_dir, dirname);
+
+      //判断文件名是否有-，如果有则文件夹名称不变,文件名字大写
+      let tempFilename = dirname;
+      if (dirname.includes("-")) {
+        tempFilename = convertToCamelCase(dirname);
+      }
       superMkdir(
         newDirPath,
         ["client", "server", "shared", "webview"],
-        dirname
+        tempFilename
       );
 
       // 创建 webview 下面的 components

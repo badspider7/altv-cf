@@ -44,5 +44,5 @@ yarn cf <plugin_name>
 
 ## Example
 
-![演示](https://github.com/badspider7/altv-cf/blob/main/bin/example/step1.png)
-![demo](https://github.com/badspider7/altv-cf/blob/main/bin/example/step2.png)
+![演示](/bin/screenshot/step1.png)
+![demo](/bin/screenshot/step2.png)

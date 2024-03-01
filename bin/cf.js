@@ -11,7 +11,7 @@ const project_basic_file = __dirname.split("node_modules")[0];
 const plugin_dir = project_basic_file.concat("src\\core\\plugins");
 
 commander
-  .version("2.0.0", "-v", "得到插件的当前版本")
+  .version("2.1.0", "-v", "得到插件的当前版本")
   .description("通过命令行在Athena创建插件文件夹")
   .arguments("<pluginName>")
   .option(
